@@ -1,0 +1,35 @@
+<!-- <div class="dashboard">
+    <aside class="sidebar">
+    <h3>Menu</h3>
+    <ul>
+        @for (item of menu; track item) {
+            <li>{{ item }}</li>
+        } @empty {
+            <li>There are no items.</li>
+        }
+        
+    </ul>
+    <button (click)="logout()">Logout</button>
+    </aside>
+
+    <main class="content">
+    <h2>Dashboard Overview</h2>
+    <div class="widgets">
+        @for (stat of stats; track stat.label) {
+            <div class="widget">
+                <h3>{{ stat.label }}</h3>
+                <p>{{ stat.value }}</p>
+            </div>
+        } @empty {
+            <div class="widget">There are no items.</div>
+        }
+    </div>
+    </main>
+</div> -->
+
+<div class="layout">
+    <app-sidebar></app-sidebar>
+    <main class="content">
+    <router-outlet></router-outlet>
+    </main>
+</div>

@@ -1,0 +1,16 @@
+.card { 
+    background:#0a0f1f; 
+    color:#00f5ff; 
+    padding:30px; 
+    text-align:center;
+    border-radius:15px; box-shadow:0 0 20px #00f5ff44; 
+    justify-content: center;
+    align-items: center;
+}
+button { 
+    background:#00f5ff; 
+    border:none; 
+    padding:10px 20px; cursor:pointer; 
+    border-radius:5px; 
+}
+button:hover { background:#00ddee; }

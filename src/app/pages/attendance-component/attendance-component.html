@@ -1,0 +1,12 @@
+<div class="card">
+      <h2>BioSecure</h2>
+      <p>Secure Access System – Attendance Recording</p>
+      <form [formGroup]="attendanceForm">
+        <label for="id">Enter your id</label>
+    <input id="id" formControlName="id" type="number" />
+      </form>
+      <button (click)="attendance()">🎙️ Attendance registration</button>
+      @if(status){
+          <p>{{ status }}</p>
+      }
+    </div>

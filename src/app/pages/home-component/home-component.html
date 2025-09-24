@@ -1,0 +1,21 @@
+<div>
+  ================== {{attendances.length}}
+  @if(attendances.length){
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>attendance time</th>
+        <th>checkOut time</th>
+      </tr>
+      @for (att of attendances; track att.id) {
+        <tr>
+          <td>{{att.name}}</td>
+          <td>{{att.attendanceTime}}</td>
+          <td>{{att.checkOutTime}}</td>
+        </tr>
+            } @empty {
+                <div class="widget">There are no items.</div>
+            }
+    </table>
+  }
+</div>
