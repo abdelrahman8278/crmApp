@@ -2,10 +2,14 @@
       <h2>BioSecure</h2>
       <p>Secure Access System – Attendance Recording</p>
       <form [formGroup]="attendanceForm">
-        <label for="id">Enter your id</label>
-    <input id="id" formControlName="id" type="number" />
+      <button (click)="startRecording()" [disabled]="recording">
+        🎙️ {{ recording ? 'Recording...' : 'Speak to register attendance' }}
+      </button>
+      @if(recording){
+          <p>{{ status }}</p>
+          <button (click)="stopRecording()"> Stop</button>
+      }
       </form>
-      <button (click)="attendance()">🎙️ Attendance registration</button>
       @if(status){
           <p>{{ status }}</p>
       }

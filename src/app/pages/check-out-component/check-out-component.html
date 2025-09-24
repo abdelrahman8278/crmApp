@@ -1,7 +1,15 @@
 <div class="card">
       <h2>BioSecure</h2>
-      <p>Secure Access System – Attendance Recording</p>
-      <button (click)="checkOut()">🎙️ Check-out registration</button>
+      <p>Secure Access System – check out Recording</p>
+      <form [formGroup]="checkOutForm">
+      <button (click)="startRecording()" [disabled]="recording">
+        🎙️ {{ recording ? 'Recording...' : 'Speak to register check out' }}
+      </button>
+      @if(recording){
+          <p>{{ status }}</p>
+          <button (click)="stopRecording()"> Stop</button>
+      }
+      </form>
       @if(status){
           <p>{{ status }}</p>
       }
