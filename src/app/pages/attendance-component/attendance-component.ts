@@ -29,7 +29,6 @@ export class AttendanceComponent implements OnInit {
   attendance() {
     let attendanceId = this.attendanceForm.controls['id'].value
     const user = this.users.find(e=>e.id === attendanceId)
-    console.log('user ====>',user)
     if(user){
       const attendance = {...user,
         attendanceTime: new Date
@@ -39,6 +38,5 @@ export class AttendanceComponent implements OnInit {
     }else{
       
     }
-    console.log('id ====>',attendanceId)
-  }
+ }
 }
